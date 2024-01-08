@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 html{
   width: 100%;
 }
@@ -8,9 +15,13 @@ body{
 }
 
 .wrapper{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   
   
 }
@@ -33,10 +44,13 @@ body{
 
 .box:nth-child(1) div{
   position: absolute;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   left: 300px;
   width: 500px;
   height: 500px;
+  background-image: -o-radial-gradient(circle, transparent 50%, coral 50%);
   background-image: radial-gradient(circle, transparent 50%, coral 50%);
   background-size: 50px 50px;
   background-position: 50px 50px;
@@ -44,12 +58,15 @@ body{
 
 .box:nth-child(2) div{
   background-color: #def;
+  background-image: -o-radial-gradient(closest-side, transparent 98%, rgba(0, 0, 0, 0.3) 99%), -o-radial-gradient(closest-side, transparent 98%, rgba(0, 0, 0, 0.3) 99%);
   background-image: radial-gradient(closest-side, transparent 98%, rgba(0, 0, 0, 0.3) 99%), radial-gradient(closest-side, transparent 98%, rgba(0, 0, 0, 0.3) 99%);
   background-size: 80px 80px;
   background-position: 0 0, 40px 40px;
 }
 
 .box:nth-child(3) div{
+  background-image:
+  -o-repeating-radial-gradient( #ffc800, white, #fffb00);
   background-image:
   repeating-radial-gradient( #ffc800, white, #fffb00);
 }
@@ -111,6 +128,36 @@ body{
 
 .box:nth-child(8) div {
   background:
+  -o-radial-gradient(
+  yellow 5%,
+  gold 31% 32%,
+  transparent 32.5% 50%,
+  lightskyblue 70%
+  ),
+  conic-gradient(
+  transparent 3%,
+  yellow 5% 8%,
+  transparent 10% 13%,
+  yellow 15% 17%,
+  transparent 20% 23%,
+  yellow 25% 28%,
+  transparent 30% 33%,
+  yellow 35% 38%,
+  transparent 40% 43%,
+  yellow 45% 48%,
+  transparent 50% 53%,
+  yellow 55% 58%,
+  transparent 60% 63%,
+  yellow 65% 68%,
+  transparent 70% 73%,
+  yellow 75% 78%,
+  transparent 80% 83%,
+  yellow 85% 88%,
+  transparent 90% 93%,
+  yellow 95% 98%,
+  transparent
+  );
+  background:
   radial-gradient(
   yellow 5%,
   gold 31% 32%,
@@ -160,7 +207,6 @@ body{
       #71C4FFFF 30deg 60deg
     );
 }
-
 
 
 .box:last-child{
